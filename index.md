@@ -1,1 +1,1 @@
-<img src="07CAT-STRIPES-superJumbo.jpg" width=100% height=100%/>
+<img src="07CAT-STRIPES-superJumbo.jpg" width=200 height=100%/>
