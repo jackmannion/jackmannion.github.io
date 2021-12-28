@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jack Mannion</title>
 
     <style>
 
@@ -53,12 +53,13 @@
         .About_Me_Link{font-size: 35px;}
         .My_Projects_Link{font-size: 35px;}
         .CV_Link{font-size: 35px;}
+        .Name{font-size: 70px;font-family: 'Courier New';}
     }
 
     .topline {
       display: flex;
       justify-content: flex-end;
-      background-color: rgb(47, 47, 47);
+      background-color: rgb(246, 237, 237);
       
       
     }
@@ -68,35 +69,65 @@
       top: 50%;
       transform: translate(0,-50%);
     }
+
+    .Home_Link:hover{
+      color: rgb(219, 0, 0);
+      font-size: 37px;
+    }
+    .CV_Link:hover{
+      color: rgb(219, 0, 0);
+      font-size: 37px;
+    }
+    .About_Me_Link:hover{
+      color: rgb(219, 0, 0);
+      font-size: 37px;
+    }
+    .My_Projects_Link:hover{
+      color: rgb(219, 0, 0);
+      font-size: 37px;
+    }
+    
+
     .CV_Link{
       order: 4;
-      color: rgb(151, 151, 151);
+      color: rgb(0, 0, 0);
+      transition: all 100ms
     }
     .CV_Link:link {
       text-decoration: none;
     }
     .Home_Link{
       order: 1;
-      color: rgb(151, 151, 151);
+      color: rgb(0, 0, 0);
+      transition: all 100ms;
     }
     .Home_Link:link{
       text-decoration: none;
     }
     .About_Me_Link{
       order: 2;
-      color: rgb(151, 151, 151)  ;
+      color: rgb(0, 0, 0)  ;
+      transition: all 100ms
     }
     .About_Me_Link:link{
       text-decoration: none;
     }
     .My_Projects_Link{
       order:3;
-      color: rgb(151, 151, 151);
+      color: rgb(0, 0, 0);
+      transition: all 100ms
     }
     .My_Projects_Link:link{
       text-decoration: none;
     }
 
+    .Name{
+      padding-left: 10px;
+    }
+    .main_background{
+      background-color: rgb(219, 210, 210);
+      height: 100%;
+    }
 
     </style>
 
@@ -113,6 +144,8 @@
         <a class = "CV_Link Desktop" href="CV.html"><p>CV</p></a>
         <a class = "CV_Link Mobile" href="CV.html"><p>CV</p></a>
     </div>
-  
+  <div class="main_background">
+    <p class = "Desktop Name">Jack Mannion</p>
+  </div>
   </body>
 </html>
