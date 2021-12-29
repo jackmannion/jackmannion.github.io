@@ -5,7 +5,7 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" href="style.css" />
- <title>Jack Mannion - About</title>
+ <title>Jack Mannion - Projects</title>
  <style>
      * {
  margin: 0;
@@ -159,11 +159,18 @@ input[type=checkbox]{
     text-decoration: underline;
 }
 .About{
-    font-size: clamp(0px,8vw,90px); 
+    font-size: 70px;
 }
 
 
-
+.division{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2px;
+    background-color: black;
+    border-width: 0px;
+}
 
 
 
@@ -219,9 +226,11 @@ input[type=checkbox]:checked ~ .menu{
 
 .firstpost_link:hover {
     color: black;
+    transform: translate(0,0);
 }
 .secondpost_link:hover {
     color: black;
+    transform: translate(0,0);
     
 }
 .firstpost_link{
@@ -232,7 +241,9 @@ input[type=checkbox]:checked ~ .menu{
     text-decoration: underline;
     font-size: 30px;
 }
-
+.TOPNAME{
+    font-size: 10vw;
+}
 
 .mainbackground{
     padding-left: 3vw;
@@ -254,14 +265,6 @@ input[type=checkbox]:checked ~ .menu{
     width: 100%;
     
 
-}
-.division{
-    margin-top: 100px;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 2px;
-    background-color: black;
-    border-width: 0px;
 }
 
 
@@ -294,17 +297,15 @@ input[type=checkbox]:checked ~ .menu{
 </nav>
 
 <div class="mainbackground">
-<p class = "About">About</p>
+<p class = "About">Projects</p>
 
-<h1 class="AboutMe">About Me</h1>
-<img src="me.jpg" alt="A picture of me" style="width: 40vw; margin-top: 10px;">
-<p class="P1">My name is Jack Mannion. I am a junior at UC Berkeley majoring in Economics and minoring in Data Science. I particularly enjoy Macroeconomics, Econometrics, and Financial Economics. More recently, since choosing to minor in Data Science, I have grown an interest in coding and creating visualizations of data, especially in the form of economic data.</p>
-<h1 class="AboutMe">Contact</h1>
-<p class="P1">Email me at: jackmannion@berkeley.edu</p>
-<h1 class="AboutMeWhy">Why I Built This Website</h1>
-<p class="P1">I built this website for two reasons:</p>
-<p class ="P1">1) To be a way to not only express my thoughts of certain economic, financial, or other topics that may be topical or interesting to me but also to serve as a way to permanently keep a record of my thoughts. I will post these thoughts on my Home page.</p> 
-<p class="P1">2) To serve as a place to put a collection of any projects, either for class or otherwise, that I have done which I feel are intersting enough to warrant a spot online. These projects could range anywhere from as simple as a single graph of data that I find interesting to as complex as an entire research paper (coming soon thanks to <a href='https://classes.berkeley.edu/content/2022-spring-econ-191-001-lec-001'target="_blank" style="color: blue;">Econ 191</a>). I will post these projects on the Projects page.</p>
+<a class = "secondpost" href="project2.html"><p class="secondpost_link">Second Project</p></a>
+<p class = "secondpost date">December 28, 2021</p>
+<p class="secondpost description">Hello, this is my second project.</p>
+<a class = "firstpost" href="project1.html"><p class="firstpost_link">First Project</p></a>
+<p class = "firstpost date">December 28, 2021</p>
+<p class="firstpost description">Hello, this is my first project.</p>
+
 
 
 
