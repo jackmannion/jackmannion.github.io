@@ -139,11 +139,59 @@ input[type=checkbox]:checked ~ .menu{
     padding-left: 15vw;
 }
 .TOPNAME{
-    font-size: 5vw;
+    font-size: 8vw;
 }
 .Berkeley{
     display: block;
     width: 70vw;
+}
+.secondpost_link{
+    display: inline-block;
+    color: black;
+    padding-top: 100px;
+    font-size: 35px;
+}
+.secondpost{
+    text-decoration: none;
+}
+.secondpost.date{
+    color: black;
+    font-size: 10px;
+    padding-top: 1px;
+    font-style: italic;
+}
+.secondpost.description{
+    color: black;
+    padding-top: 10px;
+}
+.firstpost_link{
+    display: inline-block;
+    color: black;
+    padding-top: 100px;
+    font-size: 35px;
+}
+.firstpost{
+    text-decoration: none;
+}
+.firstpost.date{
+    color: black;
+    font-size: 10px;
+    padding-top: 1px;
+    font-style: italic;
+}
+.firstpost.description{
+    color: black;
+    padding-top: 10px;
+}
+
+
+
+
+
+.endingspace{
+    height: 150px;
+    width: 100%;
+    
 }
 </style>
 </head>
@@ -154,10 +202,10 @@ input[type=checkbox]:checked ~ .menu{
 <input type="checkbox" id="checkbox_toggle" />
 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 <div class="menu">
-<li><a href="/">Home</a></li>
-<li><a href="/">About</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
 <li class="Projects">
-<a href="/">Projects</a>
+<a href="projects.html">Projects</a>
 <ul class="dropdown">
 <li><a href="/">Dropdown 1 </a></li>
 <li><a href="/">Dropdown 2</a></li>
@@ -175,12 +223,18 @@ input[type=checkbox]:checked ~ .menu{
 <div class="mainbackground">
 <p class = "TOPNAME">Jack Mannion</p>
 <img class = "Berkeley" src="Berkeley1.jpg" alt="UC Berkeley">
-
-
+<a class = "secondpost" href="secondpost.html"><p class="secondpost_link">Second Post</p></a>
+<p class = "secondpost date">December 28, 2021</p>
+<p class="secondpost description">Hello, this is my second post.</p>
+<a class = "firstpost" href="firstpost.html"><p class="firstpost_link">First Post</p></a>
+<p class = "firstpost date">December 28, 2021</p>
+<p class="firstpost description">Hello, this is my first post.</p>
 
 
 
 </div>
+
+<div class="endingspace"></div>
 
 </body>
 </html>
