@@ -1,236 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Mannion - Home</title>
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="style.css" />
+ <title>Jack Mannion</title>
+ <style>
+     * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: "Trebuchet MS";
+ background-color: rgb(221, 210, 217);
+}
+.menu a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0px;
+ background-color: rgb(246, 237, 237);
+ color: black;
+}
+.nav-links a {
+ color: black;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 30px;
+}
+.menumobile{
+    display: none;
+}
+.menu li:hover {
+ transform: translate(0,-2px);
+}
+.menu li:hover a{
+    color: red;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.Projects {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(246, 237, 237);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
 
-    <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      height:100vh;
-      width: 100vw;
-    }
-    body {
-      height: 100vh;
-      width: 100vw;
-    }
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:rgb(246, 237, 237);
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menumobile{
+    display: inline-block;
+    position: absolute;
+    top: 13.5px;
+    right: 40px;
 
+}
+.navbar{
+    color: black;
+    padding: 7.5px;
+}
 
+.menu li + li {
+ margin-top: 12px;
+}
+.menu li:hover a{
+ color: black;
+ font-size: 30px;
+}
+.menu li:hover {
+ transform: translate(0,0);
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
 
-    @media (max-width:700px) {
-        .topline{
-            width: 100%;
-            height: 30px;
-        }
-        .topline a{
-            padding-right: 20px;
-        }
-        .Desktop{display: none;}
-        .Home_Link{font-size: 150%;}
-        .About_Me_Link{font-size: 150%;}
-        .My_Projects_Link{font-size: 150%;}
-        .CV_Link{font-size: 150%;}
-        .TOPNAME{font-size: 7.5vw;}
-        .SecondPost{font-size: 4vw;margin-top: 100px;}
-        .SecondPostDescription{margin-top: 10px;font-size: 1.4vw;}
-        .SecondPostDate{font-size: 1vw;}
-        .FirstPost{font-size: 4vw;margin-top: 100px;}
-        .FirstPostDescription{margin-top:10px;font-size: 1.4vw;}
-        .FirstPostDate{font-size: 1vw;}
-        .main_background{padding-left: 15vw;}
+}
 
-        
-    }
-    @media (min-width:701px) {
-        .topline{
-            width: 100%;
-            height: 40px;
-        }
-        .topline a{
-            padding-right: 30px;
-            font-size: 33px;
-        }
-        .Mobile{display: none;}
-        .Home_Link{font-size: 35px;}
-        .About_Me_Link{font-size: 35px;}
-        .My_Projects_Link{font-size: 35px;}
-        .CV_Link{font-size: 35px;}
-        .TOPNAME{font-size: 7.5vw;}
-        .SecondPost{font-size: 4vw;margin-top: 100px;}
-        .SecondPostDescription{margin-top: 10px;font-size: 1.4vw;}
-        .SecondPostDate{font-size: 1vw;}
-        .FirstPost{font-size: 4vw;margin-top: 100px;}
-        .FirstPostDescription{margin-top:10px;font-size: 1.4vw;}
-        .FirstPostDate{font-size: 1vw;}
-        
-      
-    .Home_Link:hover{
-      color: rgb(219, 0, 0);
-      font-size: 35px;
-    }
-    .CV_Link:hover{
-      color: rgb(219, 0, 0);
-      font-size: 35px;
-    }
-    .About_Me_Link:hover{
-      color: rgb(219, 0, 0);
-      font-size: 35px;
-    }
-    .My_Projects_Link:hover{
-      color: rgb(219, 0, 0);
-      font-size: 35px;
-    }
-    .Links:hover{
-      color: rgb(255, 0, 0);
-    }
-    .main_background{
-      padding-left: 15vw;
-    }
-    }
-
-
-
-    .topline a{
-      font-family: 'Trebuchet MS';
-      position: relative;
-      top: 50%;
-      transform: translate(0,-50%);
-    }
-
-
-    .topline {
-      display: flex;
-      justify-content: flex-end;
-      background-color: rgb(246, 237, 237);
-      
-      
-    }
-    
-    
-
-    .CV_Link{
-      order: 4;
-      color: rgb(0, 0, 0);
-      transition: all 100ms
-    }
-    .CV_Link:link {
-      text-decoration: none;
-    }
-    .Home_Link{
-      order: 1;
-      color: rgb(0, 0, 0);
-      transition: all 100ms;
-    }
-    .Home_Link:link{
-      text-decoration: none;
-    }
-    .About_Me_Link{
-      order: 2;
-      color: rgb(0, 0, 0)  ;
-      transition: all 100ms
-    }
-    .About_Me_Link:link{
-      text-decoration: none;
-    }
-    .My_Projects_Link{
-      order:3;
-      color: rgb(0, 0, 0);
-      transition: all 100ms
-    }
-    .My_Projects_Link:link{
-      text-decoration: none;
-    }
-
-    
-    .TOPNAME{
-      font-family: "Trebuchet MS";
-      font-weight: lighter;
-    }
-    .Links{
-      display: inline-block;
-      color: black;
-      
-    }
-    .Links:link{
-      text-decoration: none;
-    }
-
-
-    .FirstPost{
-      font-family: 'Trebuchet MS';
-      
-    }
-    .FirstPostDate{
-      font-style: italic;
-      font-family: 'Trebuchet MS';
-    }
-    .FirstPostDescription{
-      font-family: 'Trebuchet MS';
-    }
-    .SecondPost{
-      font-family: 'Trebuchet MS';
-    }
-    .SecondPostDate{
-      font-style: italic;
-      font-family: 'Trebuchet MS';
-    }
-    .SecondPostDescription{
-      font-family: 'Trebuchet MS';
-    }
-    .Berkeley{
-      display: block;
-      width: 60vw;
-    }
-
-
-
-
-
-
-    .BottomSpace{
-      padding-top: 100px;
-    }
-    </style>
-
-
+.mainbackground{
+    padding-left: 15vw;
+}
+.TOPNAME{
+    font-size: 5vw;
+}
+.Berkeley{
+    display: block;
+    width: 70vw;
+}
+</style>
 </head>
-<body style="background-color:rgb(221, 210, 217);">
-    <div class = "topline">
-        <a class = "Home_Link Desktop" href="index.html"><p>Home</p></a>
-        <a class = "Home_Link Mobile" href="index.html"><p>Home</p></a>
-        <a class = "About_Me_Link Desktop"href="About.html"><p>About</p></a>
-        <a class = "About_Me_Link Mobile"href="About.html"><p>About</p></a>
-        <a class = "My_Projects_Link Desktop"href="Projects.html"><p>Projects</p></a>
-        <a class = "My_Projects_Link Mobile"href="Projects.html"><p>Projects</p></a>
-        <a class = "CV_Link Desktop" href="CV.pdf" target="_blank"><p>CV</p></a>
-        <a class = "CV_Link Mobile" href="CV.pdf" target="_blank"><p>CV</p></a>
-    </div>
-  <div class="main_background">
-    <p class = " TOPNAME">Jack Mannion</p>
-    <img class = "Berkeley" src="Berkeley1.jpg" alt="UC Berkeley">
-    <a class = "Desktop Links SecondPost" href="secondpost.html">Second Post</a>
-    <p class = "Desktop SecondPostDate">December 28, 2021</p>
-    <p class = "Mobile SecondPostDate">December 28, 2021</p>
-    <p class = "Desktop SecondPostDescription">Hello, this is my second post.</p>
-    <p class = "Mobile SecondPostDescription">Hello, this is my second post.</p>
-    <a class = "Desktop Links FirstPost" href="firstpost.html">First Post</a>
-    <p class = "Desktop FirstPostDate">December 28, 2021</p>
-    <p class = "Mobile FirstPostDate">December 28, 2021</p>
-    <p class = "Desktop FirstPostDescription">Hello, this is my first post.</p>
-    <p class = "Mobile FirstPostDescription">Hello, this is my first post.</p>
-    
-    
-    
-    
-    <div class = "BottomSpace">
-    </div>
-  </div>
-    
-  </body>
+<body>
+<nav class="navbar">
+<div class="logo"></div>
+<ul class="nav-links">
+<input type="checkbox" id="checkbox_toggle" />
+<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+<div class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/">About</a></li>
+<li class="Projects">
+<a href="/">Projects</a>
+<ul class="dropdown">
+<li><a href="/">Dropdown 1 </a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 3</a></li>
+<li><a href="/">Dropdown 4</a></li>
+</ul>
+</li>
+<li><a href="CV.pdf" target="_blank">CV</a></li>
+</div>
+<p class="menumobile">Menu</p>
+</ul>
+</nav>
+
+<div class="mainbackground">
+<p class = "TOPNAME">Jack Mannion</p>
+<img class = "Berkeley" src="Berkeley1.jpg" alt="UC Berkeley">
+
+
+
+
+
+</div>
+
+</body>
 </html>
