@@ -53,7 +53,8 @@ li {
     color: red;
 }
 .menu li {
- padding: 5px 14px;
+ padding-right: 14px;
+ margin: 5px;
 }
 /* DROPDOWN MENU */
 .Projects {
@@ -93,9 +94,11 @@ input[type=checkbox]{
 
 .firstpost_link:hover {
     color: red;
+    transform: translate(0,-2px);
 }
 .secondpost_link:hover {
     color: red;
+    transform: translate(0,-2px);
 }
 
 
@@ -103,11 +106,13 @@ input[type=checkbox]{
     padding-left: 15vw;
 }
 .TOPNAME{
-    font-size: 8vw;
+    font-size: clamp(0px,8vw,90px);
+    
 }
 .Berkeley{
     display: block;
     width: 70vw;
+    max-width: 950px;
 }
 .secondpost_link{
     display: inline-block;
@@ -197,20 +202,21 @@ input[type=checkbox]:checked ~ .menu{
 
 .firstpost_link:hover {
     color: black;
+    transform: translate(0,0);
 }
 .secondpost_link:hover {
     color: black;
-    
+    transform: translate(0,0);
 }
 .firstpost_link{
     text-decoration: underline;
+    font-size: 30px;
 }
 .secondpost_link{
     text-decoration: underline;
+    font-size: 30px;
 }
-.TOPNAME{
-    font-size: 10vw;
-}
+
 
 }
 
@@ -220,6 +226,14 @@ input[type=checkbox]:checked ~ .menu{
     height: 150px;
     width: 100%;
     
+}
+.division{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2px;
+    background-color: black;
+    border-width: 0px;
 }
 </style>
 </head>
@@ -261,7 +275,7 @@ input[type=checkbox]:checked ~ .menu{
 
 
 </div>
-
+<hr class="division">
 <div class="endingspace"></div>
 
 </body>
