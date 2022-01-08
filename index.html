@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="style.css" />
+ <title>Jack Mannion</title>
+ <style>
+     * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: "Trebuchet MS";
+ background-color: rgb(221, 210, 217);
+}
+.menu a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0px;
+ background-color: rgb(246, 237, 237);
+ color: black;
+}
+.nav-links a {
+ color: black;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 20px;
+}
+.menumobile{
+    display: none;
+}
+.menu li:hover {
+ transform: translate(0,-2px);
+}
+.menu li:hover a{
+    color: firebrick;
+}
+.menu li {
+ padding-right: 14px;
+ margin: 5px;
+}
+/* DROPDOWN MENU */
+.Projects {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(246, 237, 237);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+
+
+
+.firstpost_link:hover {
+    color: firebrick;
+    transform: translate(0,-2px);
+}
+.secondpost_link:hover {
+    color: firebrick;
+    transform: translate(0,-2px);
+}
+
+
+.mainbackground{
+    padding-left: 15vw;
+}
+.TOPNAME{
+    font-size: clamp(0px,8vw,90px); 
+}
+.Berkeley{
+    display: block;
+    width: 70vw;
+    max-width: 950px;
+}
+.secondpost_link{
+    display: inline-block;
+    color: black;
+    margin-top: 100px;
+    font-size: 35px;
+    
+
+}
+.secondpost{
+    text-decoration: none;
+}
+.secondpost.date{
+    color: black;
+    font-size: 10px;
+    padding-top: 1px;
+    font-style: italic;
+}
+.secondpost.description{
+    color: black;
+    padding-top: 10px;
+    padding-right: 20vw;
+}
+.firstpost_link{
+    display: inline-block;
+    color: black;
+    margin-top: 100px;
+    font-size: 35px;
+}
+
+.firstpost{
+    text-decoration: none;
+}
+.firstpost.date{
+    color: black;
+    font-size: 10px;
+    padding-top: 1px;
+    font-style: italic;
+}
+.firstpost.description{
+    color: black;
+    padding-top: 10px;
+    padding-right: 20vw;
+}
+.mobile{
+    display: none;
+}
+
+.arrow{
+    display: none;
+}
+
+.welcome{
+    margin-top: 30px;
+    margin-right: 20vw;
+    line-height: 1.2;
+    font-size: 120%;
+}
+.welcome a{
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:rgb(246, 237, 237);
+ right: 0%;
+ text-align: right;
+ top: 45px;
+ padding: 0 0;
+ width: 100px;
+}
+.menumobile{
+    display: inline-block;
+    position: absolute;
+    top: 13.5px;
+    right: 40px;
+
+}
+.navbar{
+    color: black;
+    padding: 7.5px;
+    
+}
+
+.menu li + li {
+ margin-top: 12px;
+ 
+}
+
+.menu li:hover a{
+ color: black;
+ font-size: 20px;
+
+}
+.menu li:hover {
+ transform: translate(0,0);
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+ color: black;
+ padding-left: 20px;
+ 
+ 
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+
+.firstpost_link:hover {
+    color: black;
+    transform: translate(0,0);
+}
+.secondpost_link:hover {
+    color: black;
+    transform: translate(0,0);
+}
+.firstpost_link{
+    font-style: italic;
+    font-size: 30px;
+    
+    font-family: "Trebuchet MS";
+}
+.secondpost_link{
+    text-decoration: none;
+    font-size: 30px;
+    font-style: italic;
+    
+    font-family: "Trebuchet MS";
+}
+.mainbackground{
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.TOPNAME{
+    font-size: 50px; 
+}
+
+.Berkeley{
+    width: 100%;
+    
+    
+}
+.arrow{
+    font-size: 40px;
+    display: inline-block;
+    color: rgb(6,69,173);
+    transform: translateY(5%);
+    font-style: italic;
+    margin-left: 5px;
+}
+
+.welcome{
+    margin-right: 0vw;
+    font-size: 100%;
+}
+
+
+}
+
+
+
+.endingspace{
+    height: 150px;
+    width: 100%;
+    
+}
+.division{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2px;
+    background-color: black;
+    border-width: 0px;
+}
+
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="logo"></div>
+<ul class="nav-links">
+<input type="checkbox" id="checkbox_toggle" />
+<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+<div class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li class="Projects">
+<a href="projects.html">Projects</a>
+<ul class="dropdown">
+<li><a href="/">Dropdown 1 </a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 3</a></li>
+<li><a href="/">Dropdown 4</a></li>
+</ul>
+</li>
+<li><a href="CV.pdf" target="_blank">CV</a></li>
+</div>
+<p class="menumobile">Menu</p>
+</ul>
+</nav>
+
+<div class="mainbackground">
+<p class = "TOPNAME">Jack Mannion</p>
+<img class = "Berkeley" src="Berkeley1.jpg" alt="UC Berkeley">
+<p class="welcome">Welcome to my homepage! Since my website is new, I do not yet have a large variety of posts, however, in the future, I plan on making posts that are mainly about economics or finance. These posts will not necessarily be technical in nature but instead are more based on theory. For more technical projects visit my Projects page or click <a href="projects.html">here</a>.</p>
+
+<a class = "firstpost" href="firstpost.html"><p class="firstpost_link">Tipped Workers<p class = "arrow">&#187;</p></p></a>
+<p class = "firstpost date">January 6, 2022</p>
+<p class="firstpost description">This post uses economic theory to discuss wages in the context of tipped workers.</p>
+
+
+
+</div>
+<hr class="division">
+<div class="endingspace"></div>
+
+</body>
+</html>

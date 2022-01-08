@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="style.css" />
+ <title>Jack Mannion - Tipped Workers</title>
+ <style>
+     * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+ font-family: "Trebuchet MS";
+ background-color: rgb(221, 210, 217);
+}
+.menu a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0px;
+ background-color: rgb(246, 237, 237);
+ color: black;
+}
+.nav-links a {
+ color: black;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 20px;
+}
+.menumobile{
+    display: none;
+}
+.menu li:hover {
+ transform: translate(0,-2px);
+}
+.menu li:hover a{
+    color: firebrick;
+}
+.menu li {
+ padding-right: 14px;
+ margin: 5px;
+}
+/* DROPDOWN MENU */
+.Projects {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(246, 237, 237);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+
+
+.mainbackground{
+    padding-left: 15vw;
+    padding-right: 20vw;
+}
+
+
+.mobile{
+    display: none;
+}
+
+.TOPNAME{
+    font-size: clamp(0px,8vw,90px); 
+}
+
+.graph{
+    width: clamp(300px,40vw,40vw);
+    margin-top: 30px;
+    display: block;
+}
+
+
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:rgb(246, 237, 237);
+ right: 0%;
+ text-align: right;
+ top: 45px;
+ padding: 0 0;
+ width: 100px;
+}
+.menumobile{
+    display: inline-block;
+    position: absolute;
+    top: 13.5px;
+    right: 40px;
+
+}
+.navbar{
+    color: black;
+    padding: 7.5px;
+    
+}
+
+.menu li + li {
+ margin-top: 12px;
+ 
+}
+
+.menu li:hover a{
+ color: black;
+ font-size: 20px;
+
+}
+.menu li:hover {
+ transform: translate(0,0);
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+ color: black;
+ padding-left: 20px;
+ 
+ 
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+
+
+.mainbackground{
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.TOPNAME{
+    font-size: 50px; 
+}
+
+
+}
+
+
+
+.endingspace{
+    height: 150px;
+    width: 100%;
+    
+}
+.division{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2px;
+    background-color: black;
+    border-width: 0px;
+}
+
+.paragraph{
+    line-height: 1.2;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="logo"></div>
+<ul class="nav-links">
+<input type="checkbox" id="checkbox_toggle" />
+<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+<div class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li class="Projects">
+<a href="projects.html">Projects</a>
+<ul class="dropdown">
+<li><a href="/">Dropdown 1 </a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 2</a></li>
+<li><a href="/">Dropdown 3</a></li>
+<li><a href="/">Dropdown 4</a></li>
+</ul>
+</li>
+<li><a href="CV.pdf" target="_blank">CV</a></li>
+</div>
+<p class="menumobile">Menu</p>
+</ul>
+</nav>
+
+<div class="mainbackground">
+
+<p class = "TOPNAME">Tipped Workers</p>
+<p class="paragraph">Currently, in the United States, there is a large discussion on the fairness of the way that tipped workers are being paid. In this post, I do not take a side on this political debate, but instead, discuss the economic theory behind tipped workers.</p>
+<p class="paragraph">One of the first things that I learned in my Microeconomics class is that, in perfect competition, a person's wage should be equal to their marginal product of labor. In plain English, a person's wage should be equal to the value of the goods/services that they provide.</p>
+<p class="paragraph">The federal minimum wage for tipped workers is $2.13. This, however, does not mean that tipped workers theoretically can only be paid $2.13. Instead, employers are obligated to pay the difference between the regular minimum wage ($7.25) and the tipped minimum wage, in the event that tips do not cover the difference. In effect, therefore, the tipped minimum wage shifts the burden of the payment of labor to the consumer rather than the producer. Herein lies a large part of the controversy of the tipped minimum wage. Many do not believe that tipped workers should have their wages depend on the generosity of the customers they serve.</p>
+<p class="paragraph">I will not focus on the politics of this claim, but I will focus on the economics of tipped workers. I make the claim that, in the service industry, paying workers solely based on tips, along with certain assumptions, is more economically efficient than the way that workers are currently paid. Since there are many industries in which tipping workers is the status quo, I will focus specifically on waiters in restaurants.</p>
+<p class="paragraph">First I will list two assumptions that must hold in order for my claim to be true.</p>
+<p class="paragraph">1) Labor has no effect on the price of food on the menu: <var>DP/DL = 0</var></p>
+<p class="paragraph">2) There exists some enforcement mechanism to force consumers to tip a value that is equal to the true value of the service they received.</p>
+<p class="paragraph">Under these assumptions, I believe that paying workers solely on tips, meaning that they receive $0 per hour guaranteed in wages, is more economically efficient than the hourly wage + tip system that exists now.</p>
+<p class="paragraph">To see how this is true, let's go back to the basics of wages. A worker's wage should be equal to the marginal product of labor that they provide. In other words, they should be paid equal to the amount of benefit that they provide to the consumer. Imagine, therefore, that you go to a restaurant and have terrible service. To the consumer, the value of the service that they receive is less than if they went to a restaurant and had the best service they have ever had. It makes sense, therefore, that the waiter who provided worse service should be paid less than the waiter who provided the great service. The question then becomes, how can we enforce a system in which better service leads to higher pay and worse service leads to lower pay.</p>
+<p class="paragraph">First, we can use assumption 1 to help encourage consumers to participate in this new system. Currently, since employers of waiters still pay their workers' wages aside from tips, the price of food is affected by the labor of the waiters. Or, in other words, the more laborers that a restaurant has, the higher the price of food on the menu will be. This, in general, makes sense. However, if consumers are now expected to pay entirely the wage of their waiters, it will not make sense for them to pay the same price for food on the menu as they did before. Therefore, in order to make this new system fair, the price of food should drop in order to reflect the new fact that employers do not pay their employees.</p>
+<p class="paragraph">Next comes the part of this theory that makes this new system more economically efficient than the system that currently exists. The <i>consumer</i> knows more about the quality of service that they receive than the employer. Since the consumer is directly experiencing the service, they will have greater information regarding their waiter's service than an employer will have. It makes sense, therefore, that to be more economically efficient, the consumer should decide the wage of the waiters instead of the employers since we want to enforce a system where wage is equal to the marginal product of labor. Using assumption 2, which somehow requires consumers to tip the true value of the service they received, this system could exist.</p>
+<p class="paragraph">Therefore, this system does two things. First, it creates an incentive for tipped workers to provide better quality service since their wage depends on the quality of their service. Second, it creates an incentive for tipped workers to use their quality of service to encourage consumers to spend more money since a larger bill means a larger tip.</p>
+<p class="paragraph">Of course, however, there are many problems with this idea. Most obvious of which, however, is that it would be impossible, as far as I am aware, to create an enforcement mechanism to require consumers to tip their waiters an amount equal to their marginal product of labor. Without this enforcement mechanism, it would be impossible to create the system that I have described. Perhaps most problematic, however, is that this system would be very politically unpopular and it would probably be impossible to implement it in reality.</p>
+<p class="paragraph">To summarize, the main point that I am trying to bring across is that it would be more economically efficient for consumers to tip their waiters directly as their sole wage instead of employers paying their employees wages because consumers have a greater level of knowledge of the value of the service that their waiter provides than the employer does. In order to make this theory work, the price of food must drop dramatically by ensuring that <var>DP/DL = 0</var>. Furthermore, there must exist some enforcement mechanism for consumers to tip the marginal product of labor that their waiters provided to them.</p>
+<p class="paragraph">As a final comment, this writing isn't meant to be a real solution to the debate that is happening across America when it comes to tipped workers but instead is supposed to be an economic dive into a theoretical world where tipping could be the most economically efficient wage of paying employees.</p>
+
+
+
+
+</div>
+<hr class="division">
+<div class="endingspace"></div>
+
+</body>
+</html>
